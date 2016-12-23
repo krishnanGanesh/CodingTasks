@@ -11,13 +11,19 @@ public class BST {
 	  public static void main(String args[]){
 		  BST binarySearchTree = new BST();
 		  binarySearchTree.addANode("Kaku");
-		  binarySearchTree.addANode("puneet");
-		  binarySearchTree.addANode("Kamnran");
-		  binarySearchTree.addANode("Kamnran");
-		  binarySearchTree.preOrder(binarySearchTree.head.right);
+		  binarySearchTree.addANode("Puneet");
+		  //binarySearchTree.addANode("Kamnran");
+		  binarySearchTree.addANode("Kamran");
+		  binarySearchTree.addANode("Rakesh");
+		  //binarySearchTree.addANode("Qin");
+		  binarySearchTree.addANode("Sagar");
+		  System.out.println("Printing In-order...");
+		  binarySearchTree.inOrder(binarySearchTree.head.right);
 		  //binarySearchTree.postOrder(binarySearchTree.head);
 		  //binarySearchTree.inOrder(binarySearchTree.head);
-		  
+		  binarySearchTree.deleteANode("Rakesh");
+		  System.out.println("Printing In-order...");
+		  binarySearchTree.inOrder(binarySearchTree.head.right);
 	  }
 	  public Node createANode(String name){
 	    
@@ -109,8 +115,78 @@ public class BST {
 	  
 	  public void deleteANode(String name){
 	    
+		  Node parentNode = findPosition(name, false);
+		  if(parentNode == null){
+			  System.out.println("There's no such node");
+		  }
+		  else{
+			  if(name.compareTo(parentNode.right.name) == 0){
+				  if((parentNode.right.right == null) && (parentNode.right.left == null)){
+					  parentNode.right = null;
+					  System.out.println("Deleted node : "+name);
+				  }
+				  else if(parentNode.right.right == null){
+					  parentNode.right = parentNode.right.left;
+				  }
+				  else if(parentNode.right.left == null){
+					  parentNode.right = parentNode.right.right;
+				  }
+				  else{
+					  if(parentNode.right.right.left != null){
+						  //call min function
+						  Node inOrderSuccessorParent = findSmallest(parentNode.right.right);
+						  parentNode.right.name = inOrderSuccessorParent.left.name;
+						  inOrderSuccessorParent.left = null;
+					  }
+					  else{
+						  parentNode.right.name = parentNode.right.right.name;
+						  parentNode.right.right = parentNode.right.right.right;
+					  }
+				  }
+			  }
+			  else if(name.compareTo(parentNode.left.name) == 0){
+				  if((parentNode.left.right == null) && (parentNode.left.left == null)){
+					  parentNode.left = null;
+				  }
+				  else if(parentNode.left.right == null){
+					  parentNode.left = parentNode.left.left;
+				  }
+				  else if(parentNode.left.left == null){
+					  parentNode.left = parentNode.left.right;
+				  }
+				  else{
+					  if(parentNode.left.right.left != null){
+						  //call min function
+						  Node inOrderSuccessorParent = findSmallest(parentNode.left.right);
+						  parentNode.left.name = inOrderSuccessorParent.left.name;
+						  inOrderSuccessorParent.left = null;
+					  }
+					  else{
+						  parentNode.left.name = parentNode.left.right.name;
+						  parentNode.left.right = parentNode.left.right.right;
+					  }
+				  }
+			  }
+			  else{
+				  System.out.println("Such a node does not exist.");
+			  }
+		  }
+		  
 	  }
 	  
+	  public Node findSmallest(Node node){
+		  
+		  if(node.left == null){
+			  System.out.println("This was the Inorder successor of the node to be deleted.");
+			  return null;
+		  }
+		  Node parent = node;
+		  while(node.left != null){
+			  parent = node ;
+			  node = node.left;
+		  }
+		  return parent;
+	  }
 	  public void preOrder(Node temp){
 	    if(temp == null){
 	      return;
@@ -124,17 +200,17 @@ public class BST {
 	    if(temp == null){
 	      return;
 	    }
-	    preOrder(temp.left);
+	    inOrder(temp.left);
 	    System.out.println(temp.name);
-	    preOrder(temp.right);
+	    inOrder(temp.right);
 	  }
 	  
 	  public void postOrder(Node temp){
 	    if(temp == null){
 	      return;
 	    }
-	    preOrder(temp.left);
-	    preOrder(temp.right);
+	    postOrder(temp.left);
+	    postOrder(temp.right);
 	    System.out.println(temp.name);
 	  }
 	  
