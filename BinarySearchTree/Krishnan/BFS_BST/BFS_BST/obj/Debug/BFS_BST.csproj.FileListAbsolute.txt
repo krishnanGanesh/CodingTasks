@@ -1,0 +1,6 @@
+c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\bin\Debug\BFS_BST.exe.config
+c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\bin\Debug\BFS_BST.exe
+c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\bin\Debug\BFS_BST.pdb
+c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\obj\Debug\BFS_BST.csprojResolveAssemblyReference.cache
+c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\obj\Debug\BFS_BST.exe
+c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\obj\Debug\BFS_BST.pdb
