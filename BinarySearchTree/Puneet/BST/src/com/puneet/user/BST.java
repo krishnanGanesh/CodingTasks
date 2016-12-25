@@ -1,5 +1,8 @@
 package com.puneet.user;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BST {
 
 	public Node head;
@@ -24,6 +27,8 @@ public class BST {
 		  binarySearchTree.deleteANode("Rakesh");
 		  System.out.println("Printing In-order...");
 		  binarySearchTree.inOrder(binarySearchTree.head.right);
+		  System.out.println("Printing level-order...");
+		  binarySearchTree.levelOrderTraversal(binarySearchTree.head.right);
 	  }
 	  public Node createANode(String name){
 	    
@@ -212,6 +217,26 @@ public class BST {
 	    postOrder(temp.left);
 	    postOrder(temp.right);
 	    System.out.println(temp.name);
+	  }
+	  
+	  public void levelOrderTraversal(Node root){
+		  
+		  Queue<Node> queue = new LinkedList<Node>();
+		  
+		  queue.add(root);
+		  
+		  while(!queue.isEmpty()){
+			  Node dequeuedNode = queue.remove();
+			  System.out.println(dequeuedNode.name);
+			  
+			  if(dequeuedNode.left != null){
+				  queue.add(dequeuedNode.left);
+			  }
+			  
+			  if(dequeuedNode.right != null){
+				  queue.add(dequeuedNode.right);
+			  }
+		  }
 	  }
 	  
 }
