@@ -1,0 +1,6 @@
+c:\users\einstien\documents\visual studio 2015\Projects\Semaphore_Threading\Semaphore_Threading\bin\Debug\Semaphore_Threading.exe.config
+c:\users\einstien\documents\visual studio 2015\Projects\Semaphore_Threading\Semaphore_Threading\obj\Debug\Semaphore_Threading.csprojResolveAssemblyReference.cache
+c:\users\einstien\documents\visual studio 2015\Projects\Semaphore_Threading\Semaphore_Threading\bin\Debug\Semaphore_Threading.exe
+c:\users\einstien\documents\visual studio 2015\Projects\Semaphore_Threading\Semaphore_Threading\bin\Debug\Semaphore_Threading.pdb
+c:\users\einstien\documents\visual studio 2015\Projects\Semaphore_Threading\Semaphore_Threading\obj\Debug\Semaphore_Threading.exe
+c:\users\einstien\documents\visual studio 2015\Projects\Semaphore_Threading\Semaphore_Threading\obj\Debug\Semaphore_Threading.pdb
