@@ -4,3 +4,6 @@ c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\bin\Debu
 c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\obj\Debug\BFS_BST.csprojResolveAssemblyReference.cache
 c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\obj\Debug\BFS_BST.exe
 c:\users\einstien\documents\visual studio 2015\Projects\BFS_BST\BFS_BST\obj\Debug\BFS_BST.pdb
+C:\Users\Einstien\Desktop\CodingTasks\CodingTasks\BinarySearchTree\Krishnan\BFS_BST\BFS_BST\bin\Debug\BFS_BST.exe.config
+C:\Users\Einstien\Desktop\CodingTasks\CodingTasks\BinarySearchTree\Krishnan\BFS_BST\BFS_BST\obj\Debug\BFS_BST.exe
+C:\Users\Einstien\Desktop\CodingTasks\CodingTasks\BinarySearchTree\Krishnan\BFS_BST\BFS_BST\obj\Debug\BFS_BST.pdb
